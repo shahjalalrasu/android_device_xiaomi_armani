@@ -1,0 +1,5 @@
+# Libs
+vendor/lib/libNimsWrap.so
+
+# WiFi
+lib/modules/pronto/pronto_wlan.ko
