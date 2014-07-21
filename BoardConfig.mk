@@ -25,8 +25,6 @@
 
 LOCAL_PATH := device/xiaomi/armani
 
-TARGET_UNIFIED_DEVICE := true
-
 USE_CAMERA_STUB := true
 
 # Inherit from the proprietary version
@@ -59,6 +57,7 @@ TARGET_PREBUILT_RECOVERY_KERNEL := device/xiaomi/armani/kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --dt device/xiaomi/armani/dt.img --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 
 # Fix this up by examining /proc/mtd on a running device
