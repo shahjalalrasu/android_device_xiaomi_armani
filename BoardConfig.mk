@@ -73,10 +73,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 # TWRP
 TARGET_RECOVERY_INITRC := device/xiaomi/armani/init.rc
 DEVICE_RESOLUTION := 720x1280
-TW_INTERNAL_STORAGE_PATH := "/storage/emulated/0"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "legacy"
-TW_EXTERNAL_STORAGE_PATH := "/storage/sdcard1"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard1"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
@@ -87,10 +83,11 @@ TW_FLASH_FROM_STORAGE := true
 BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_10x18.h\"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
 BOARD_HAS_NO_SELECT_BUTTON := true
-TWRP_EVENT_LOGGING := true
-HAVE_SELINUX := true
+TARGET_RECOVERY_FSTAB := device/xiaomi/armani/recovery.fstab
+TW_NO_USB_STORAGE := true
+TARGET_USERIMAGES_USE_EXT4 := true
 
 # External storage mount
-BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
+#BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
